@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".siswa.PembayaranActivity"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:text="Info Pembayaran"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/backgroundcolor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swlayout1"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/listdata1"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/not_found1"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:text="Data Kosong"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="Data masih belum ada"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginRight="5dp"-->
+    <!--                android:layout_marginLeft="5dp"-->
+    <!--                android:background="@drawable/btn_bg">-->
+
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="130dp">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="horizontal">-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="225dp"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:orientation="vertical">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="20dp"-->
+    <!--                                android:layout_marginLeft="10dp"-->
+    <!--                                android:layout_marginTop="5dp"-->
+    <!--                                android:layout_marginRight="10dp"-->
+    <!--                                android:text="Jenis Pembayaran : SPP"-->
+    <!--                                android:textColor="@color/colorPrimaryDark"-->
+    <!--                                android:textStyle="bold" />-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_marginLeft="10dp"-->
+    <!--                                android:layout_marginTop="5dp"-->
+    <!--                                android:layout_marginRight="10dp"-->
+    <!--                                android:text="Ket : Pembayaran SPP Tahun"-->
+    <!--                                android:textColor="@color/colorPrimaryDark"-->
+    <!--                                android:textStyle="bold" />-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_marginLeft="10dp"-->
+    <!--                                android:layout_marginRight="10dp"-->
+    <!--                                android:text="         Pertama"-->
+    <!--                                android:textColor="@color/colorPrimaryDark"-->
+    <!--                                android:textStyle="bold" />-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_marginLeft="10dp"-->
+    <!--                                android:layout_marginTop="5dp"-->
+    <!--                                android:layout_marginRight="10dp"-->
+    <!--                                android:text="Tanggal : 20 Maret 2019"-->
+    <!--                                android:textColor="@color/colorPrimaryDark"-->
+    <!--                                android:textStyle="bold" />-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:layout_marginLeft="10dp"-->
+    <!--                                android:layout_marginTop="5dp"-->
+    <!--                                android:layout_marginRight="10dp"-->
+    <!--                                android:text="Penerima : Ibu Keuangan"-->
+    <!--                                android:textColor="@color/colorPrimaryDark"-->
+    <!--                                android:textStyle="bold" />-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:orientation="vertical">-->
+
+    <!--                            <LinearLayout-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="60dp">-->
+
+    <!--                                <TextView-->
+    <!--                                    android:layout_width="match_parent"-->
+    <!--                                    android:layout_height="30dp"-->
+    <!--                                    android:layout_gravity="center"-->
+    <!--                                    android:text="Rp.600.000"-->
+    <!--                                    android:textStyle="italic"-->
+    <!--                                    android:textColor="@color/orange"-->
+    <!--                                    android:textAlignment="center"-->
+    <!--                                    android:textSize="20sp"/>-->
+
+    <!--                            </LinearLayout>-->
+
+    <!--                            <LinearLayout-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="60dp">-->
+
+    <!--                                <TextView-->
+    <!--                                    android:layout_width="match_parent"-->
+    <!--                                    android:layout_height="30dp"-->
+    <!--                                    android:layout_gravity="center"-->
+    <!--                                    android:text="LUNAS"-->
+    <!--                                    android:textStyle="italic"-->
+    <!--                                    android:textColor="#000000"-->
+    <!--                                    android:textAlignment="center"-->
+    <!--                                    android:textSize="20sp"/>-->
+
+    <!--                            </LinearLayout>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </androidx.cardview.widget.CardView>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginRight="5dp"-->
+    <!--                android:layout_marginLeft="5dp"-->
+    <!--                android:background="@drawable/btn_bg">-->
+
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="225dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="20dp"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Jenis Pembayaran : SPP"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Ket : Pembayaran SPP Tahun"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="         Kedua"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Tanggal : 20 Maret 2020"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Penerima : Ibu Keuangan"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="Rp.600.000"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="@color/orange"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="LUNAS"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="#000000"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginRight="5dp"-->
+    <!--                android:layout_marginLeft="5dp"-->
+    <!--                android:background="@drawable/btn_bg">-->
+
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="130dp">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="225dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="25dp"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Jenis Pembayaran : SPP"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Ket : Pembayaran SPP Tahun"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="         Ketiga"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Tanggal : 20 Maret 2021"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Penerima : Ibu Keuangan"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="Rp.600.000"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="@color/orange"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="LUNAS"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="#000000"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginRight="5dp"-->
+    <!--                android:layout_marginLeft="5dp"-->
+    <!--                android:background="@drawable/btn_bg">-->
+
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="130dp">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="225dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="20dp"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="20dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Jenis Pembayaran : Study Tour"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Ket : Pembayaran Study Tour Siswa"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Tanggal : 23 Maret 2020"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginLeft="10dp"-->
+    <!--                            android:layout_marginTop="5dp"-->
+    <!--                            android:layout_marginRight="10dp"-->
+    <!--                            android:text="Penerima : Ibu Keuangan"-->
+    <!--                            android:textColor="@color/colorPrimaryDark"-->
+    <!--                            android:textStyle="bold" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="Rp.1.500.000"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="@color/orange"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                        <LinearLayout-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="60dp">-->
+
+    <!--                            <TextView-->
+    <!--                                android:layout_width="match_parent"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:layout_gravity="center"-->
+    <!--                                android:text="LUNAS"-->
+    <!--                                android:textStyle="italic"-->
+    <!--                                android:textColor="#000000"-->
+    <!--                                android:textAlignment="center"-->
+    <!--                                android:textSize="20sp"/>-->
+
+    <!--                        </LinearLayout>-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </ScrollView>-->
