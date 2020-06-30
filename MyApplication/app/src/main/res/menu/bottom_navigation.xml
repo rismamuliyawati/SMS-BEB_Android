@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/jadwal"
+        android:title="Jadwal"
+        android:icon="@drawable/ic_schedule_black_24dp"/>
+    <item
+        android:id="@+id/absen"
+        android:title="Absensi"
+        android:icon="@drawable/ic_assignment_black_24dp"/>
+    <item
+        android:id="@+id/logout1"
+        android:title="Logout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp" />
+
+</menu>

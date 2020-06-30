@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Absensi">
+
+    <LinearLayout
+        android:id="@+id/atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="170dp">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_margin="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Hadir" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+
+            android:layout_margin="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Aplha" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_margin="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Izin" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+
+            android:layout_margin="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Sakit" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/baris1"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nama1"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Muhammad Alif"
+                android:textColor="@color/backgroundcolor"
+                android:padding="10dp"
+                android:textSize="13sp"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:contextClickable="true"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/baris2"
+        android:layout_below="@+id/baris1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nama2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Reza Ramadhani"
+                android:textColor="@color/backgroundcolor"
+                android:padding="10dp"
+                android:textSize="13sp"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:contextClickable="true"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@id/nama1"
+                android:padding="10dp"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textisiabsen"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Isi Absensi"-->
+    <!--        android:textSize="30sp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"/>-->
+
+
+</RelativeLayout>

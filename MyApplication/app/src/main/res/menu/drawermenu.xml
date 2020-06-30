@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item
+        android:id="@+id/profil"
+        android:title="Profil"
+        android:icon="@drawable/ic_iconfinder_icons_user_1564534" />
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_iconfinder_ic_dashboard_48px_352300"/>
+    <item
+        android:id="@+id/info"
+        android:title="Info"
+        android:icon="@drawable/ic_iconfinder_info_alt_383122"/>
+</menu>

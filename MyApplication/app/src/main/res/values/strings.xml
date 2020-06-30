@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SMS</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <array name="Ket">
+        <item>Sakit</item>
+        <item>Ijin</item>
+    </array>
+
+    <array name="Status_absen">
+        <item>Hadir</item>
+        <item>Sakit</item>
+        <item>Ijin</item>
+        <item>Alpha</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="absen_semua">Absen Semua</string>
+    <string name="nama">Nama</string>
+</resources>
